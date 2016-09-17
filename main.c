@@ -1,8 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
-int main(int argc, char *argv[]) {
+main() 
+{
+	char *memoria_alocada;
+	
+	memoria_alocada = malloc (50 * sizeof (char));
+	
+	if (memoria_alocada == NULL)
+	{
+		printf ("Nao foi possivel alocar a memoria desejada!\n");
+	}
+	
+	else
+	{
+		strcpy (memoria_alocada, "Este e a melhor aula do mundo!\n");
+	}
+	
+	printf ("O conteudo de memoria alocada e: %s", memoria_alocada);
+	
+	free(memoria_alocada);
+	
 	return 0;
 }
