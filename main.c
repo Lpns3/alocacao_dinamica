@@ -4,9 +4,9 @@
 
 main() 
 {
-	char *memoria_alocada;
+	char * memoria_alocada;
 	
-	memoria_alocada = malloc (50 * sizeof (char));
+	memoria_alocada = calloc (50 , sizeof (char));
 	
 	if (memoria_alocada == NULL)
 	{
